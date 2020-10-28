@@ -1,0 +1,64 @@
+@import url(./reset.css);
+
+body *, 
+body *::before,
+body *::after {
+    box-sizing: border-box;
+}
+/* 레이아웃 공통 */
+.header, .visual, .main, .slogan, .footer-inner {
+    width: 940px;
+    margin: 0 auto;
+}
+/* 헤더 */
+.header {
+    background-color: yellow;
+}
+/* 비주얼 */
+.visual {
+    background-color: lime;
+}
+/* 메인 콘텐츠 */
+.main {
+    background-color: pink;
+    padding : 30px 15px;
+    /* padding: 30px; */
+    /* overflow: hidden; BFC */
+}
+/* .clearfix {
+    clear: both; 
+} */
+.main::after {
+    display: block;
+    content: "";
+    clear: both; /* block 일때만 존재 
+    both : float left right 둘 다 */
+}
+.group {
+    float: left;
+    margin: 0 15px; 
+}
+
+.group1 {
+    background-color: lightgreen;
+    width: 250px;
+}
+.group2 {
+    background-color: tomato;
+    width: 380px;
+}
+.group3 {
+    background-color: teal;
+    width: 190px;
+}
+/* 슬로건 */
+.slogan {
+    background-color: skyblue;
+}
+/* 푸터 */
+.footer {
+    background-color: purple;
+}
+.footer-inner {
+    background-color: orange;
+}
