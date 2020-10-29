@@ -8,12 +8,37 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="logo">Web Cafe</h1>
+        <h1 class="logo"><a href="#"><img src="./images/logo.png" alt="Web Cafe"></a></h1>
+        <ul class="member">
+            <li><a href="#">홈</a></li>
+            <li><span class="divider" aria-hidden="true">:</span><a href="#">로그인</a></li>
+            <li><span class="divider" aria-hidden="true">:</span><a href="#">회원가입</a></li>
+            <li><span class="divider" aria-hidden="true">:</span><a href="#">사이트맵</a></li>
+            <li><span class="divider" aria-hidden="true">:</span><a href="#">english</a></li>
+        </ul>
         <nav class="navigation">내비게이션</nav>
     </header>
     <div class="visual">비주얼</div>
     <main class="main">
-        <div class="group group1">그룹1</div>
+        <div class="group group1">
+            <section class="login">
+                <h2 class="login-heading">로그인</h2>
+                <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="login-form">
+                    <fieldset>
+                        <legend>로그인 폼</legend>
+                        <div class="user-email">
+                            <label for="userEmail">아이디</label>
+                            <input type="email" id="userEmail" name="userEmail" placeholder="이메일형식" required>
+                        </div>
+                        <div class="user-pw">
+                            <label for="userPw">비밀번호</label>
+                            <input type="password" id="userPw" name="userPw" placeholder="8자리이상" required>
+                        </div>
+                        <button class="btn-login" type="submit">로그인</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
         <div class="group group2">그룹2</div>
         <div class="group group3">그룹3</div>
         <!-- <div class="clearfix"></div> -->

@@ -1,9 +1,27 @@
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("fontello.css");
 @import url(./reset.css);
 
 body *, 
 body *::before,
 body *::after {
     box-sizing: border-box;
+}
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 루트 요소 */
+html {
+    font-size: 10px;
+}
+/* 본문 */
+body {
+    background-color: #ccc;
+    font-family: 'Spoqa Han Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
 }
 /* 레이아웃 공통 */
 .header, .visual, .main, .slogan, .footer-inner {
@@ -12,7 +30,41 @@ body *::after {
 }
 /* 헤더 */
 .header {
-    background-color: yellow;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px 50px;
+    position: relative;
+}
+
+/* 로고 */
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 65px;
+}
+/* 회원 서비스 */
+.member{
+    position: relative;
+    right: -10px;
+    text-align: right;
+    padding: 2px 0;
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end; */
+}
+.member li {
+    display: inline-block;
+}
+.member a {
+    display: inline-block;
+    padding: 8px 10px;
+    text-transform: uppercase;
+}
+/* 내비게이션 */
+.navigation {
+    background-color: orange;
+    border-top: 2px solid #000;
+    height: 50px;
 }
 /* 비주얼 */
 .visual {
@@ -20,7 +72,13 @@ body *::after {
 }
 /* 메인 콘텐츠 */
 .main {
-    background-color: pink;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0 ;
+    /* padding : 30px 0px; */
+    min-height: 450px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     padding : 30px 15px;
     /* padding: 30px; */
     /* overflow: hidden; BFC */
@@ -28,27 +86,26 @@ body *::after {
 /* .clearfix {
     clear: both; 
 } */
-.main::after {
+
+/* .main::after {
     display: block;
     content: "";
-    clear: both; /* block 일때만 존재 
-    both : float left right 둘 다 */
-}
+    clear: both;
+} */ 
+/* block 일때만 존재 both : float left right 둘 다 */
 .group {
     float: left;
     margin: 0 15px; 
+    height: 450px;
 }
 
 .group1 {
-    background-color: lightgreen;
     width: 250px;
 }
 .group2 {
-    background-color: tomato;
     width: 380px;
 }
 .group3 {
-    background-color: teal;
     width: 190px;
 }
 /* 슬로건 */
