@@ -238,6 +238,122 @@ body {
     line-height: 1.5;
     margin-top: 5px;
 }
+/* 검색 폼 */
+.search-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.search {
+    background: #ccc linear-gradient(#ccc, #fff);
+    border-radius: 15px 15px 0 0;
+    padding : 15px 25px 10px;
+    border: 1px solid #aaa;
+    border-bottom-color: #fff;
+    align-items: center; /*교차축 정렬*/
+}
+
+.search input {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 24px;
+    padding: 2px 2px 2px 0.5em; /*1em -> 한 글자*/
+    margin: 0 0.5em;
+    flex-grow: 1; /*input width 증가*/
+}
+.btn-search {
+    background-color: #333;
+    color: #fff;
+    padding: 0px 10px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+/* 공지사항 및 자료실 */
+.board {
+    margin-top: 20px;
+    position: relative; /*기준*/
+    min-height: 200px;
+}
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+    display: none;
+}
+
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+    display: block;
+}
+.tab {
+    /* float: left; */
+    position: absolute;
+    top: 0;
+}
+.notice-heading {
+    left: 0;
+}
+.pds-heading {
+    left: 73px;
+}
+.tab-act .tab {
+    z-index: 10;
+}
+.tab a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    background: #ccc linear-gradient(#ccc, #fff);
+    color: #999;
+}
+.tab-act .tab a {
+    background: #fff;
+    color: #ed552f;
+    border-color: #ed552f #ed552f #fff #ed552f;
+}
+.notice-list,
+.pds-list {
+    /* position: absolute; */
+    padding: 45px;
+    /* top: 45px;
+    left: 0;
+    width: 100%; */
+}
+.notice-list li,
+.pds-list li {
+    /* display: flex;
+    flex-flow: row nowrap; */
+    margin-top: 10px;
+}
+.notice-list li *,
+.pds-list li * {
+    vertical-align: middle;
+}
+.notice-list a,
+.pds-list a{
+    display: inline-block;
+    /* flex-grow: 1; */
+    width: calc(100% - 103px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.notice-more, .pds-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+.notice-more::before,
+.pds-more::before {
+    color: hsla(110, 50%, 50%, 1);
+}
+
 /* 슬로건 */
 .slogan {
     background-color: skyblue;

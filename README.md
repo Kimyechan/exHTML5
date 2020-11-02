@@ -57,3 +57,7 @@ ref : [https://css-tricks.com/](https://css-tricks.com/)
     - ref :
         - [https://www.miketaylr.com/pres/html5/forms2.html](https://www.miketaylr.com/pres/html5/forms2.html)
         - [https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)
+
+- BEM(네이밍 패턴)
+    __ : 누구의 포함
+    -- : 상태
